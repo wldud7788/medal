@@ -3,30 +3,10 @@ import React from "react";
 import Button from "./Button.jsx";
 import Input from "./Input.jsx";
 
-const Form = ({
-  handleNationChange,
-  nation,
-  handleGoldChange,
-  gold,
-  handleSilverChange,
-  silver,
-  handleBronszeChange,
-  bronze,
-  handleSubmit,
-  handleUpdate,
-}) => {
+const Form = ({ formValues, handleChange, handleSubmit, handleUpdate }) => {
   return (
     <form className="input-group">
-      <Input
-        handleNationChange={handleNationChange}
-        nation={nation}
-        handleGoldChange={handleGoldChange}
-        gold={gold}
-        handleSilverChange={handleSilverChange}
-        silver={silver}
-        handleBronszeChange={handleBronszeChange}
-        bronze={bronze}
-      />
+      <Input formValues={formValues} handleChange={handleChange} />
       <Button handleSubmit={handleSubmit} handleUpdate={handleUpdate} />
     </form>
   );
